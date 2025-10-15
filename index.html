@@ -1,0 +1,2576 @@
+https://sapienpruebas.od2.vtiger.com/appointments/implantesquiceno<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento Dental - Dr. Juan Camilo Quiceno</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --negro: #000000;
+            --marron: #604040;
+            --gris-medio: #808080;
+            --gris-oscuro: #606060;
+            --gris-muy-oscuro: #202020;
+            --gris-carbon: #404040;
+            --blanco: #ffffff;
+            --acento: #a0522d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--negro);
+            color: var(--blanco);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(135deg, var(--gris-muy-oscuro) 0%, var(--negro) 100%);
+            padding: 2rem;
+            overflow: hidden;
+        }
+        
+        .dental-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.08;
+            z-index: 1;
+        }
+        
+        .dental-icon {
+            position: absolute;
+            font-size: 3rem;
+            color: var(--marron);
+            opacity: 0.2;
+            animation: float 20s infinite linear;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-100vh) rotate(360deg); }
+        }
+        
+        .hero-container {
+            max-width: 1100px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        
+        .badge {
+            background: rgba(96, 64, 64, 0.2);
+            color: var(--blanco);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(96, 64, 64, 0.4);
+            animation: fadeIn 1s ease-out;
+        }
+        
+        .badge span {
+            color: var(--marron);
+            font-weight: 700;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .doctor-name {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+        
+        .doctor-name span {
+            font-weight: 700;
+            color: var(--marron);
+        }
+        
+        .hero-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--blanco);
+            line-height: 1.2;
+        }
+        
+        .hero-title .highlight {
+            color: var(--marron);
+            background: linear-gradient(135deg, transparent 0%, rgba(96, 64, 64, 0.1) 100%);
+            padding: 0.2rem 0.5rem;
+            border-radius: 5px;
+        }
+        
+        .hero-description {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            color: var(--gris-medio);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+        
+        .location-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(96, 64, 64, 0.15);
+            padding: 0.7rem 1.5rem;
+            border-radius: 30px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(96, 64, 64, 0.3);
+            color: var(--blanco);
+            font-weight: 500;
+        }
+        
+        .location-tag i {
+            color: var(--marron);
+        }
+        
+        .value-propositions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+            width: 100%;
+            max-width: 900px;
+        }
+        
+        .value-card {
+            background: rgba(96, 64, 64, 0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(96, 64, 64, 0.2);
+            transition: all 0.4s ease;
+            text-align: left;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+            background: rgba(96, 64, 64, 0.1);
+            border-color: var(--marron);
+        }
+        
+        .value-card i {
+            font-size: 2rem;
+            color: var(--marron);
+            margin-bottom: 1rem;
+        }
+        
+        .value-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            color: var(--blanco);
+        }
+        
+        .value-card p {
+            font-size: 0.95rem;
+            color: var(--gris-medio);
+            line-height: 1.5;
+        }
+        
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .particle {
+            position: absolute;
+            background-color: var(--marron);
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: particleFloat 25s infinite linear;
+        }
+        
+        @keyframes particleFloat {
+            0% { transform: translateY(100vh) rotate(0deg); }
+            100% { transform: translateY(-100vh) rotate(360deg); }
+        }
+        
+        .divider {
+            width: 200px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--marron), transparent);
+            margin: 2rem auto;
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--marron);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--gris-medio);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @media (max-width: 992px) {
+            .doctor-name { font-size: 2.5rem; }
+            .hero-title { font-size: 1.8rem; }
+            .hero-description { font-size: 1.1rem; }
+            .value-propositions { grid-template-columns: 1fr; }
+        }
+        
+        @media (max-width: 576px) {
+            .doctor-name { font-size: 2rem; }
+            .hero-title { font-size: 1.5rem; }
+            .hero-description { font-size: 1rem; }
+            .stats-container { gap: 2rem; }
+            .stat-value { font-size: 2rem; }
+            .badge { font-size: 0.8rem; padding: 0.6rem 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="dental-background" id="dentalBackground"></div>
+        <div class="particles" id="particles"></div>
+        
+        <div class="hero-container">
+            <div class="badge">
+                ESTRATEGIA DE CRECIMIENTO
+            </div>
+            
+            <div class="hero-content">
+                <h1 class="doctor-name">Dr. <span>Juan Camilo Quiceno</span></h1>
+                
+                <div class="location-tag">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Enfocado en la comunidad de Manizales
+                </div>
+                
+                <h2 class="hero-title">
+                    <span class="highlight">Posicionamiento local garantizado
+                </h2>
+                
+                <p class="hero-description">
+                    En Manizales existe un potencial oculto: miles de personas buscan 
+                    atención dental de calidad pero no te encuentran. Transformamos esa 
+                    oportunidad en tu mayor ventaja competitiva, conectando tu expertise 
+                    con quienes realmente necesitan tus servicios.
+                </p>
+                
+                <div class="divider"></div>
+                
+                <div class="stats-container">
+                    <div class="stat">
+                        <div class="stat-value">+85%</div>
+                        <div class="stat-label">Potencial de Crecimiento</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">#1</div>
+                        <div class="stat-label">Mercado Local</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">10x</div>
+                        <div class="stat-label">ROI Garantizado</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="value-propositions">
+                <div class="value-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Enfoque en Manizales</h3>
+                    <p>Estrategias hiperlocales que te posicionan como referente dental en tu zona, captando pacientes que viven y trabajan cerca de tu consultorio.</p>
+                </div>
+                
+                <div class="value-card">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>Costo Accesible, Resultados Premium</h3>
+                    <p>Inversión optimizada que maximiza tu retorno. No pagas por clicks sin conversión, solo por pacientes reales interesados en tus servicios.</p>
+                </div>
+                
+                <div class="value-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Conexión Humana</h3>
+                    <p>No somos una agencia, somos tu socio estratégico. Entendemos las necesidades de los manizaleños y las conectamos con tu expertise profesional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dentalBackground = document.getElementById('dentalBackground');
+            const dentalIcons = ['tooth', 'teeth', 'teeth-open', 'teeth-open', 'teeth-open'];
+            
+            for (let i = 0; i < 15; i++) {
+                const icon = document.createElement('i');
+                icon.className = `dental-icon fas fa-${dentalIcons[Math.floor(Math.random() * dentalIcons.length)]}`;
+                icon.style.left = `${Math.random() * 100}%`;
+                icon.style.top = `${Math.random() * 100}%`;
+                icon.style.animationDuration = `${18 + Math.random() * 25}s`;
+                icon.style.fontSize = `${2 + Math.random() * 3}rem`;
+                dentalBackground.appendChild(icon);
+            }
+            
+            const particlesContainer = document.getElementById('particles');
+            for (let i = 0; i < 25; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.width = `${1 + Math.random() * 3}px`;
+                particle.style.height = particle.style.width;
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                particle.style.animationDuration = `${20 + Math.random() * 30}s`;
+                particle.style.animationDelay = `${Math.random() * 5}s`;
+                particlesContainer.appendChild(particle);
+            }
+            
+            const doctorName = document.querySelector('.doctor-name span');
+            const text = doctorName.textContent;
+            doctorName.textContent = '';
+            
+            let i = 0;
+            function typeWriter() {
+                if (i < text.length) {
+                    doctorName.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 120);
+                }
+            }
+            
+            setTimeout(typeWriter, 800);
+            
+            const valueCards = document.querySelectorAll('.value-card');
+            valueCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 500 + (index * 200));
+            });
+            
+            // Contador animado para las estadísticas
+            const statValues = document.querySelectorAll('.stat-value');
+            statValues.forEach(stat => {
+                const target = parseInt(stat.textContent);
+                let current = 0;
+                const increment = target / 30;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        stat.textContent = stat.textContent; // Mantiene el formato original
+                        clearInterval(timer);
+                    } else {
+                        if (stat.textContent.includes('%')) {
+                            stat.textContent = '+' + Math.floor(current) + '%';
+                        } else if (stat.textContent.includes('M')) {
+                            stat.textContent = (current / 1000000).toFixed(1) + 'M';
+                        } else if (stat.textContent.includes('x')) {
+                            stat.textContent = current.toFixed(1) + 'x';
+                        }
+                    }
+                }, 50);
+            });
+        });
+    </script>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Sapien - Estrategias SEM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --negro: #000000;
+            --marron: #604040;
+            --gris-medio: #808080;
+            --gris-oscuro: #606060;
+            --blanco: #ffffff;
+            --fondo-claro: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--blanco);
+            color: var(--negro);
+            overflow-x: hidden;
+        }
+        
+        .sem-section {
+            min-height: 100vh;
+            padding: 4rem 2rem;
+            background: var(--blanco);
+            position: relative;
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+        
+        .section-subtitle {
+            color: var(--marron);
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--negro);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--gris-oscuro);
+            line-height: 1.5;
+        }
+        
+        .cards-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .sem-card {
+            background: var(--blanco);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(96, 64, 64, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .sem-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(96, 64, 64, 0.12);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.2rem;
+        }
+        
+        .platform-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.2rem;
+            font-size: 1.5rem;
+            color: var(--blanco);
+        }
+        
+        .google-ads { background: #4285F4; }
+        .facebook-ads { background: #1877F2; }
+        .instagram-ads { background: linear-gradient(45deg, #E4405F, #C13584); }
+        
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--negro);
+            margin-bottom: 0.3rem;
+        }
+        
+        .card-subtitle {
+            color: var(--marron);
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .card-description {
+            color: var(--gris-oscuro);
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .result-item {
+            text-align: center;
+            padding: 0.8rem;
+            background: rgba(96, 64, 64, 0.03);
+            border-radius: 8px;
+        }
+        
+        .result-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--marron);
+            margin-bottom: 0.2rem;
+        }
+        
+        .result-label {
+            font-size: 0.75rem;
+            color: var(--gris-oscuro);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .benefits-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .benefits-list li {
+            padding: 0.4rem 0;
+            color: var(--gris-oscuro);
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+        
+        .benefits-list li::before {
+            content: '✓';
+            color: var(--marron);
+            font-weight: bold;
+            margin-right: 0.6rem;
+            font-size: 1rem;
+        }
+        
+        .dental-decoration {
+            position: absolute;
+            bottom: -10px;
+            right: -10px;
+            opacity: 0.03;
+            font-size: 6rem;
+            color: var(--marron);
+            z-index: 0;
+        }
+        
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .floating-element {
+            position: absolute;
+            font-size: 1.5rem;
+            color: rgba(96, 64, 64, 0.03);
+            animation: floatElement 25s infinite linear;
+        }
+        
+        @keyframes floatElement {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-100px) rotate(360deg); }
+        }
+        
+        @media (max-width: 768px) {
+            .cards-container {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .sem-card {
+                padding: 1.5rem;
+            }
+            
+            .results-grid {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="sem-section">
+        <div class="floating-elements" id="floatingElements"></div>
+        
+        <div class="section-header">
+            <div class="section-subtitle">Sin Complicaciones</div>
+            <h2 class="section-title">Pacientes Nuevos en 30 Días</h2>
+            <p class="section-description">
+                Estrategias probadas que funcionan desde el día uno. 
+                Sin experiencia necesaria - nosotros hacemos todo.
+            </p>
+        </div>
+        
+        <div class="cards-container">
+            <!-- Google Ads Card -->
+            <div class="sem-card">
+                <i class="fas fa-tooth dental-decoration"></i>
+                <div class="card-header">
+                    <div class="platform-logo google-ads">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Google Ads</h3>
+                        <div class="card-subtitle">Cuando Te Buscan</div>
+                    </div>
+                </div>
+                
+                <p class="card-description">
+                    Apareces primero cuando alguien en Manizales busca "odontólogo cerca". 
+                    Pacientes listos para agendar.
+                </p>
+                
+                <div class="results-grid">
+                    <div class="result-item">
+                        <div class="result-value">19-28</div>
+                        <div class="result-label">Citas Mensuales</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-value">9:7</div>
+                        <div class="result-label">ROI Garantizado</div>
+                    </div>
+                </div>
+                
+                <ul class="benefits-list">
+                    <li>Solo pagas por clicks locales</li>
+                    <li>Apareces en Google Maps</li>
+                    <li>Reseñas que generan confianza</li>
+                    <li>Llamadas directas a tu consultorio</li>
+                </ul>
+            </div>
+            
+            <!-- Facebook Ads Card -->
+            <div class="sem-card">
+                <i class="fas fa-teeth dental-decoration"></i>
+                <div class="card-header">
+                    <div class="platform-logo facebook-ads">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Facebook Ads</h3>
+                        <div class="card-subtitle">Vecinos Interesados</div>
+                    </div>
+                </div>
+                
+                <p class="card-description">
+                    Llegamos a personas cerca de tu consultorio que necesitan servicios dentales 
+                    pero no saben que existes.
+                </p>
+                
+                <div class="results-grid">
+                    <div class="result-item">
+                        <div class="result-value">39%</div>
+                        <div class="result-label">Más Barato</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-value">6-9</div>
+                        <div class="result-label">Leads Semanales</div>
+                    </div>
+                </div>
+                
+                <ul class="benefits-list">
+                    <li>Segmentamos por edad y ubicación</li>
+                    <li>Mensajes directos automatizados</li>
+                    <li>Presupuesto controlado</li>
+                    <li>Resultados medibles en tiempo real</li>
+                </ul>
+            </div>
+            
+            <!-- Instagram Ads Card -->
+            <div class="sem-card">
+                <i class="fas fa-teeth-open dental-decoration"></i>
+                <div class="card-header">
+                    <div class="platform-logo instagram-ads">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Instagram Ads</h3>
+                        <div class="card-subtitle">Confianza Visual</div>
+                    </div>
+                </div>
+                
+                <p class="card-description">
+                    Mostramos tu trabajo con imágenes que generan confianza inmediata. 
+                    Transformamos seguidores en pacientes.
+                </p>
+                
+                <div class="results-grid">
+                    <div class="result-item">
+                        <div class="result-value">40%</div>
+                        <div class="result-label">Más Engagement</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-value">3-6</div>
+                        <div class="result-label">Consultas/Dia</div>
+                    </div>
+                </div>
+                
+                <ul class="benefits-list">
+                    <li>Historias que generan confianza</li>
+                    <li>Botón de WhatsApp directo</li>
+                    <li>Contenido que educa y convence</li>
+                    <li>Presencia local fortalecida</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const floatingElements = document.getElementById('floatingElements');
+            const icons = ['tooth', 'teeth', 'teeth-open', 'smile', 'user-md'];
+            
+            for (let i = 0; i < 8; i++) {
+                const element = document.createElement('i');
+                element.className = `floating-element fas fa-${icons[Math.floor(Math.random() * icons.length)]}`;
+                element.style.left = `${Math.random() * 100}%`;
+                element.style.top = `${Math.random() * 100}%`;
+                element.style.animationDuration = `${20 + Math.random() * 20}s`;
+                element.style.animationDelay = `${Math.random() * 3}s`;
+                floatingElements.appendChild(element);
+            }
+            
+            // Efectos de aparición para las tarjetas
+            const cards = document.querySelectorAll('.sem-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'all 0.5s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 200 + (index * 150));
+            });
+
+            // Animación de números
+            const resultValues = document.querySelectorAll('.result-value');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const value = entry.target.textContent;
+                        if (value.includes('%') || value.includes(':') || value.includes('-')) {
+                            // Ya tiene formato especial, no animar
+                            return;
+                        }
+                        
+                        const target = parseInt(value);
+                        let current = 0;
+                        const duration = 1500;
+                        const increment = target / (duration / 50);
+                        
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= target) {
+                                entry.target.textContent = value;
+                                clearInterval(timer);
+                            } else {
+                                entry.target.textContent = Math.floor(current);
+                            }
+                        }, 50);
+                        
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            resultValues.forEach(value => observer.observe(value));
+        });
+    </script>
+    
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Sapien - SEO & Presencia Orgánica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --negro: #000000;
+            --marron: #604040;
+            --gris-medio: #808080;
+            --gris-oscuro: #606060;
+            --blanco: #ffffff;
+            --fondo-claro: #f8f9fa;
+            --beige-claro: #f5f1ee;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--blanco);
+            color: var(--negro);
+            overflow-x: hidden;
+        }
+        
+        .seo-section {
+            min-height: 100vh;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, var(--beige-claro) 0%, var(--blanco) 100%);
+            position: relative;
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+        
+        .section-subtitle {
+            color: var(--marron);
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--negro);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--gris-oscuro);
+            line-height: 1.5;
+        }
+        
+        .automation-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .platform-card {
+            background: var(--blanco);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(96, 64, 64, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .platform-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(96, 64, 64, 0.12);
+        }
+        
+        .platform-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .platform-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.5rem;
+            font-size: 2rem;
+            color: var(--blanco);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .google-business { background: linear-gradient(135deg, #4285F4, #34A853); }
+        .facebook-organic { background: linear-gradient(135deg, #1877F2, #166FE5); }
+        .instagram-organic { background: linear-gradient(135deg, #E4405F, #C13584); }
+        
+        .platform-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--negro);
+            margin-bottom: 0.3rem;
+        }
+        
+        .platform-subtitle {
+            color: var(--marron);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .platform-description {
+            color: var(--gris-oscuro);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        .automation-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .automation-features li {
+            padding: 0.8rem 0;
+            color: var(--gris-oscuro);
+            display: flex;
+            align-items: flex-start;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(96, 64, 64, 0.05);
+        }
+        
+        .automation-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .automation-features li::before {
+            content: '🔄';
+            color: var(--marron);
+            font-weight: bold;
+            margin-right: 0.8rem;
+            font-size: 1rem;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+        
+        .results-preview {
+            background: linear-gradient(135deg, rgba(96, 64, 64, 0.03) 0%, rgba(96, 64, 64, 0.01) 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--marron);
+        }
+        
+        .results-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--marron);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.8rem;
+        }
+        
+        .results-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--marron);
+            margin-bottom: 0.2rem;
+        }
+        
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--gris-oscuro);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .dental-decoration {
+            position: absolute;
+            bottom: -15px;
+            right: -15px;
+            opacity: 0.03;
+            font-size: 8rem;
+            color: var(--marron);
+            z-index: 0;
+        }
+        
+        .floating-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .floating-shape {
+            position: absolute;
+            font-size: 2rem;
+            color: rgba(96, 64, 64, 0.04);
+            animation: floatShape 30s infinite linear;
+        }
+        
+        @keyframes floatShape {
+            0% { transform: translateY(0) rotate(0deg) scale(1); }
+            50% { transform: translateY(-50px) rotate(180deg) scale(1.1); }
+            100% { transform: translateY(0) rotate(360deg) scale(1); }
+        }
+        
+        .centralization-message {
+            max-width: 800px;
+            margin: 4rem auto 0;
+            text-align: center;
+            padding: 2.5rem;
+            background: var(--blanco);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(96, 64, 64, 0.1);
+        }
+        
+        .message-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--negro);
+            margin-bottom: 1rem;
+        }
+        
+        .message-text {
+            font-size: 1.1rem;
+            color: var(--gris-oscuro);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .highlight-text {
+            color: var(--marron);
+            font-weight: 600;
+            background: rgba(96, 64, 64, 0.08);
+            padding: 0.3rem 0.6rem;
+            border-radius: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .automation-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .platform-card {
+                padding: 2rem;
+            }
+            
+            .platform-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .platform-icon {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+            
+            .results-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .centralization-message {
+                margin-top: 2rem;
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="seo-section">
+        <div class="floating-shapes" id="floatingShapes"></div>
+        
+        <div class="section-header">
+            <div class="section-subtitle">Presencia Automatizada</div>
+            <h2 class="section-title">Visibilidad Orgánica en Piloto Automático</h2>
+            <p class="section-description">
+                Tu presencia digital trabaja 24/7 mientras tú te enfocas en lo que mejor haces: 
+                cuidar sonrisas. Todo centralizado, todo automatizado.
+            </p>
+        </div>
+        
+        <div class="automation-grid">
+            <!-- Google My Business -->
+            <div class="platform-card">
+                <i class="fas fa-map-marker-alt dental-decoration"></i>
+                <div class="platform-header">
+                    <div class="platform-icon google-business">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <div>
+                        <h3 class="platform-title">Google My Business</h3>
+                        <div class="platform-subtitle">Primero en las Búsquedas Locales</div>
+                    </div>
+                </div>
+                
+                <p class="platform-description">
+                    Apareces en Google Maps cuando alguien busca "odontólogo cerca". 
+                    Horarios actualizados, reseñas gestionadas y fotos profesionales.
+                </p>
+                
+                <ul class="automation-features">
+                    <li>Optimización de horarios según picos de búsqueda local</li>
+                    <li>Respuestas automáticas a preguntas frecuentes</li>
+                    <li>Gestión inteligente de reseñas y reputación</li>
+                    <li>Publicación semanal de actualizaciones relevantes</li>
+                </ul>
+                
+                <div class="results-preview">
+                    <div class="results-title">Resultados en 60 Días</div>
+                    <div class="results-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">85%</div>
+                            <div class="stat-label">Más Visible</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">12-18</div>
+                            <div class="stat-label">Llamadas/Mes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Facebook Orgánico -->
+            <div class="platform-card">
+                <i class="fas fa-users dental-decoration"></i>
+                <div class="platform-header">
+                    <div class="platform-icon facebook-organic">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div>
+                        <h3 class="platform-title">Facebook Fan Page</h3>
+                        <div class="platform-subtitle">Comunidad Local Activa</div>
+                    </div>
+                </div>
+                
+                <p class="platform-description">
+                    Construimos una comunidad de pacientes y seguidores que interactúan 
+                    con tu contenido y recomiendan tus servicios orgánicamente.
+                </p>
+                
+                <ul class="automation-features">
+                    <li>Contenido programado según análisis de engagement local</li>
+                    <li>Respuestas automáticas en mensajes directos</li>
+                    <li>Recordatorios de citas y cuidados post-tratamiento</li>
+                    <li>Encuestas y contenido interactivo para la comunidad</li>
+                </ul>
+                
+                <div class="results-preview">
+                    <div class="results-title">Crecimiento Orgánico</div>
+                    <div class="results-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">200%</div>
+                            <div class="stat-label">Más Seguidores</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5-8</div>
+                            <div class="stat-label">Referidos/Semana</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Instagram Orgánico -->
+            <div class="platform-card">
+                <i class="fas fa-camera dental-decoration"></i>
+                <div class="platform-header">
+                    <div class="platform-icon instagram-organic">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div>
+                        <h3 class="platform-title">Instagram Profesional</h3>
+                        <div class="platform-subtitle">Confianza Visual Automatizada</div>
+                    </div>
+                </div>
+                
+                <p class="platform-description">
+                    Tu expertise visible las 24 horas. Historias, reels y publicaciones 
+                    que generan confianza y convierten seguidores en pacientes.
+                </p>
+                
+                <ul class="automation-features">
+                    <li>Publicación en horarios de máxima visibilidad local</li>
+                    <li>Stories automáticas con consejos de salud dental</li>
+                    <li>Respuestas rápidas a comentarios y preguntas</li>
+                    <li>Contenido educativo que posiciona tu autoridad</li>
+                </ul>
+                
+                <div class="results-preview">
+                    <div class="results-title">Engagement Constante</div>
+                    <div class="results-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">300%</div>
+                            <div class="stat-label">Más Interacción</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">15-25</div>
+                            <div class="stat-label">Consultas/Mes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="centralization-message">
+            <h3 class="message-title">De Profesional Local a Referente Regional</h3>
+            <p class="message-text">
+                Cuando tu presencia digital está <span class="highlight-text">centralizada y automatizada</span>, 
+                dejas de competir por pacientes y comienzas a ser <span class="highlight-text">la opción preferida</span>. 
+                Tu expertise brilla las 24 horas, los 7 días de la semana, mientras tú descansas o atiendes consultas.
+            </p>
+            <p class="message-text">
+                Los pacientes de Manizales no solo te encontrarán - <span class="highlight-text">confiarán en ti antes de conocerte</span>. 
+                Porque tu presencia digital comunica profesionalismo, experiencia y cercanía, 
+                tres elementos que transforman consultas en relaciones duraderas.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const floatingShapes = document.getElementById('floatingShapes');
+            const shapes = ['tooth', 'star', 'heart', 'certificate', 'award', 'shield'];
+            
+            for (let i = 0; i < 10; i++) {
+                const shape = document.createElement('i');
+                shape.className = `floating-shape fas fa-${shapes[Math.floor(Math.random() * shapes.length)]}`;
+                shape.style.left = `${Math.random() * 100}%`;
+                shape.style.top = `${Math.random() * 100}%`;
+                shape.style.animationDuration = `${25 + Math.random() * 25}s`;
+                shape.style.animationDelay = `${Math.random() * 5}s`;
+                shape.style.fontSize = `${1.5 + Math.random() * 2}rem`;
+                floatingShapes.appendChild(shape);
+            }
+            
+            // Efectos de aparición para las tarjetas
+            const cards = document.querySelectorAll('.platform-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 300 + (index * 200));
+            });
+
+            // Animación del mensaje central
+            const message = document.querySelector('.centralization-message');
+            message.style.opacity = '0';
+            message.style.transform = 'translateY(40px)';
+            
+            setTimeout(() => {
+                message.style.transition = 'all 0.8s ease';
+                message.style.opacity = '1';
+                message.style.transform = 'translateY(0)';
+            }, 1200);
+
+            // Efecto de aparición para textos destacados
+            const highlights = document.querySelectorAll('.highlight-text');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.transition = 'all 0.5s ease';
+                        entry.target.style.background = 'rgba(96, 64, 64, 0.15)';
+                        entry.target.style.transform = 'scale(1.05)';
+                        setTimeout(() => {
+                            entry.target.style.transform = 'scale(1)';
+                        }, 500);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            highlights.forEach(highlight => observer.observe(highlight));
+        });
+    </script>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Sapien - Sitio Web de Conversión</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --negro: #000000;
+            --marron: #604040;
+            --gris-medio: #808080;
+            --gris-oscuro: #606060;
+            --blanco: #ffffff;
+            --neon-marron: #a0522d;
+            --fondo-oscuro: #0a0a0a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--negro);
+            color: var(--blanco);
+            overflow-x: hidden;
+        }
+        
+        .website-section {
+            min-height: 100vh;
+            padding: 5rem 2rem;
+            background: var(--negro);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .background-dental {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .dental-mega-icon {
+            position: absolute;
+            font-size: 25rem;
+            color: var(--marron);
+            opacity: 0.08;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            animation: pulseGlow 8s ease-in-out infinite;
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% { 
+                opacity: 0.08;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% { 
+                opacity: 0.12;
+                transform: translate(-50%, -50%) scale(1.05);
+            }
+        }
+        
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--marron), var(--neon-marron));
+            color: var(--blanco);
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            box-shadow: 0 0 20px rgba(160, 82, 45, 0.3);
+        }
+        
+        .section-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--blanco);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        
+        .section-title .neon-text {
+            background: linear-gradient(135deg, var(--blanco), var(--marron));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(160, 82, 45, 0.5);
+        }
+        
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: var(--gris-medio);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+        
+        .conversion-funnel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .funnel-step {
+            background: rgba(96, 64, 64, 0.05);
+            border: 1px solid rgba(96, 64, 64, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .funnel-step:hover {
+            transform: translateY(-10px);
+            background: rgba(96, 64, 64, 0.1);
+            border-color: var(--marron);
+            box-shadow: 0 10px 30px rgba(96, 64, 64, 0.2);
+        }
+        
+        .funnel-step::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--marron), var(--neon-marron));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .funnel-step:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--marron), var(--neon-marron));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--blanco);
+            box-shadow: 0 5px 15px rgba(96, 64, 64, 0.3);
+        }
+        
+        .step-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--blanco);
+            margin-bottom: 1rem;
+        }
+        
+        .step-description {
+            color: var(--gris-medio);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .website-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background: rgba(96, 64, 64, 0.03);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            background: rgba(96, 64, 64, 0.08);
+            transform: translateX(5px);
+        }
+        
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--marron);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            color: var(--blanco);
+            font-size: 1.1rem;
+        }
+        
+        .feature-text {
+            color: var(--blanco);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .conversion-stats {
+            background: linear-gradient(135deg, rgba(96, 64, 64, 0.1), rgba(96, 64, 64, 0.05));
+            border: 1px solid rgba(96, 64, 64, 0.2);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stats-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--blanco);
+            margin-bottom: 2rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--neon-marron);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 10px rgba(160, 82, 45, 0.5);
+        }
+        
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--gris-medio);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .neon-glow {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, var(--neon-marron) 0%, transparent 70%);
+            opacity: 0.1;
+            filter: blur(40px);
+            animation: moveGlow 10s ease-in-out infinite;
+        }
+        
+        @keyframes moveGlow {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(50px, -30px); }
+        }
+        
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .conversion-funnel {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .funnel-step {
+                padding: 2rem;
+            }
+            
+            .website-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .conversion-stats {
+                padding: 2rem;
+            }
+            
+            .dental-mega-icon {
+                font-size: 15rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="website-section">
+        <div class="background-dental">
+            <i class="dental-mega-icon fas fa-tooth"></i>
+            <div class="neon-glow" style="top: 20%; left: 10%;"></div>
+            <div class="neon-glow" style="top: 70%; left: 80%;"></div>
+        </div>
+        
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-badge">Conversión Máxima</div>
+                <h2 class="section-title">
+                    Donde el Tráfico se Convierte en <span class="neon-text">Clientes Reales</span>
+                </h2>
+                <p class="section-subtitle">
+                    Cada visitante del SEM y SEO encuentra una experiencia diseñada específicamente 
+                    para convertirlo en paciente. Diseño técnico + psicología de conversión.
+                </p>
+            </div>
+            
+            <div class="conversion-funnel">
+                <div class="funnel-step">
+                    <div class="step-icon">
+                        <i class="fas fa-mouse-pointer"></i>
+                    </div>
+                    <h3 class="step-title">Landing Estratégica</h3>
+                    <p class="step-description">
+                        Páginas diseñadas para cada servicio específico. El visitante encuentra 
+                        exactamente lo que busca en menos de 3 segundos.
+                    </p>
+                </div>
+                
+                <div class="funnel-step">
+                    <div class="step-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3 class="step-title">Agendamiento Inteligente</h3>
+                    <p class="step-description">
+                        Sistema de citas que muestra disponibilidad real y confirma automáticamente. 
+                        Reduce no-shows en un 70%.
+                    </p>
+                </div>
+                
+                <div class="funnel-step">
+                    <div class="step-icon">
+                        <i class="fas fa-comment-medical"></i>
+                    </div>
+                    <h3 class="step-title">Chat Médico 24/7</h3>
+                    <p class="step-description">
+                        Asistente virtual que responde Preguntas frecuentes y agenda consultas 
+                        incluso fuera de tu horario de atención.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="website-features">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="feature-text">Diseño 100% Mobile First</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="feature-text">Carga en menos de 2 segundos</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="feature-text">Certificado SSL médico</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="feature-text">Optimizado para SEO local</div>
+                </div>
+            </div>
+            
+            <div class="conversion-stats">
+                <h3 class="stats-title">Resultados Comprobados en Consultorios Similares</h3>
+                <div class="stats-grid">
+                    <div class="stat">
+                        <div class="stat-value">94%</div>
+                        <div class="stat-label">Tasa de Conversión</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">3.8x</div>
+                        <div class="stat-label">ROI en Primer Mes</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">28</div>
+                        <div class="stat-label">Pacientes/Mes Promedio</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">4.9★</div>
+                        <div class="stat-label">Rating Experiencia</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animación de aparición escalonada para los pasos del funnel
+            const funnelSteps = document.querySelectorAll('.funnel-step');
+            funnelSteps.forEach((step, index) => {
+                step.style.opacity = '0';
+                step.style.transform = 'translateY(30px)';
+                
+                setTimeout(() => {
+                    step.style.transition = 'all 0.6s ease';
+                    step.style.opacity = '1';
+                    step.style.transform = 'translateY(0)';
+                }, 300 + (index * 200));
+            });
+
+            // Animación de las estadísticas
+            const statValues = document.querySelectorAll('.stat-value');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const value = entry.target.textContent;
+                        
+                        if (value.includes('%')) {
+                            animatePercentage(entry.target, parseInt(value));
+                        } else if (value.includes('x')) {
+                            animateMultiplier(entry.target, parseFloat(value));
+                        } else if (value.includes('★')) {
+                            // No animar ratings con estrellas
+                            return;
+                        } else {
+                            animateNumber(entry.target, parseInt(value));
+                        }
+                        
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            statValues.forEach(value => observer.observe(value));
+
+            function animatePercentage(element, target) {
+                let current = 0;
+                const duration = 2000;
+                const increment = target / (duration / 50);
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        element.textContent = target + '%';
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = Math.floor(current) + '%';
+                    }
+                }, 50);
+            }
+
+            function animateMultiplier(element, target) {
+                let current = 0;
+                const duration = 2000;
+                const increment = target / (duration / 50);
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        element.textContent = target.toFixed(1) + 'x';
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = current.toFixed(1) + 'x';
+                    }
+                }, 50);
+            }
+
+            function animateNumber(element, target) {
+                let current = 0;
+                const duration = 1500;
+                const increment = target / (duration / 50);
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        element.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = Math.floor(current);
+                    }
+                }, 50);
+            }
+
+            // Efecto de brillo intermitente en el título
+            const neonText = document.querySelector('.neon-text');
+            setInterval(() => {
+                neonText.style.textShadow = '0 0 30px rgba(160, 82, 45, 0.8)';
+                setTimeout(() => {
+                    neonText.style.textShadow = '0 0 30px rgba(160, 82, 45, 0.5)';
+                }, 500);
+            }, 3000);
+        });
+    </script>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Sapien - CRM Médico Integral</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --negro: #000000;
+            --marron: #604040;
+            --gris-medio: #808080;
+            --gris-oscuro: #606060;
+            --blanco: #ffffff;
+            --neon-marron: #a0522d;
+            --verde-exito: #2ecc71;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--negro);
+            color: var(--blanco);
+            overflow-x: hidden;
+        }
+        
+        .crm-section {
+            min-height: 100vh;
+            padding: 5rem 2rem;
+            background: var(--negro);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .background-network {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0.03;
+        }
+        
+        .network-node {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--marron);
+            border-radius: 50%;
+            animation: nodePulse 4s infinite;
+        }
+        
+        .network-line {
+            position: absolute;
+            height: 1px;
+            background: var(--marron);
+            transform-origin: left center;
+        }
+        
+        @keyframes nodePulse {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.5); }
+        }
+        
+        .section-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .growth-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: linear-gradient(135deg, var(--marron), var(--neon-marron));
+            color: var(--blanco);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            box-shadow: 0 5px 20px rgba(160, 82, 45, 0.4);
+        }
+        
+        .growth-percentage {
+            background: var(--verde-exito);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            animation: pulseGrowth 2s infinite;
+        }
+        
+        @keyframes pulseGrowth {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .section-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--blanco);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+        
+        .section-title .highlight {
+            background: linear-gradient(135deg, var(--blanco), var(--marron));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: var(--gris-medio);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+        
+        .crm-platform {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: rgba(96, 64, 64, 0.05);
+            border-radius: 20px;
+            border: 1px solid rgba(96, 64, 64, 0.2);
+        }
+        
+        .platform-logo {
+            flex-shrink: 0;
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--marron), var(--neon-marron));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--blanco);
+            box-shadow: 0 8px 25px rgba(96, 64, 64, 0.3);
+        }
+        
+        .platform-info {
+            flex: 1;
+        }
+        
+        .platform-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--blanco);
+            margin-bottom: 0.5rem;
+        }
+        
+        .platform-description {
+            color: var(--gris-medio);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .demo-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: var(--verde-exito);
+            color: var(--blanco);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+        }
+        
+        .demo-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(46, 204, 113, 0.5);
+        }
+        
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .module-card {
+            background: rgba(96, 64, 64, 0.05);
+            border: 1px solid rgba(96, 64, 64, 0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .module-card:hover {
+            transform: translateY(-8px);
+            background: rgba(96, 64, 64, 0.1);
+            border-color: var(--marron);
+            box-shadow: 0 15px 35px rgba(96, 64, 64, 0.2);
+        }
+        
+        .module-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--marron), var(--neon-marron));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: var(--blanco);
+        }
+        
+        .module-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--blanco);
+            margin-bottom: 1rem;
+        }
+        
+        .module-description {
+            color: var(--gris-medio);
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+        
+        .module-features {
+            list-style: none;
+        }
+        
+        .module-features li {
+            padding: 0.5rem 0;
+            color: var(--gris-medio);
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(96, 64, 64, 0.1);
+        }
+        
+        .module-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .module-features li::before {
+            content: '🔗';
+            margin-right: 0.8rem;
+            font-size: 0.8rem;
+        }
+        
+        .automation-flow {
+            background: linear-gradient(135deg, rgba(96, 64, 64, 0.1), rgba(96, 64, 64, 0.05));
+            border: 1px solid rgba(96, 64, 64, 0.2);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+        }
+        
+        .flow-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--blanco);
+            margin-bottom: 2rem;
+        }
+        
+        .flow-steps {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            margin-bottom: 3rem;
+        }
+        
+        .flow-step {
+            text-align: center;
+            flex: 1;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--marron);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: 700;
+            color: var(--blanco);
+            box-shadow: 0 5px 15px rgba(96, 64, 64, 0.3);
+        }
+        
+        .step-label {
+            font-size: 0.9rem;
+            color: var(--gris-medio);
+            font-weight: 600;
+        }
+        
+        .flow-line {
+            position: absolute;
+            top: 25px;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--marron), transparent);
+            z-index: 1;
+        }
+        
+        .profit-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .metric {
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--verde-exito);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 10px rgba(46, 204, 113, 0.3);
+        }
+        
+        .metric-label {
+            font-size: 0.9rem;
+            color: var(--gris-medio);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .crm-platform {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .modules-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .flow-steps {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .flow-line {
+                display: none;
+            }
+            
+            .profit-metrics {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="crm-section">
+        <div class="background-network" id="network"></div>
+        
+        <div class="section-container">
+            <div class="section-header">
+                <div class="growth-badge">
+                    <span>CRECIMIENTO ODONTOLÓGICO</span>
+                    <div class="growth-percentage">+68%</div>
+                </div>
+                <h2 class="section-title">
+                    El CRM que Convierte <span class="highlight">Pacientes en Fidelidad</span>
+                </h2>
+                <p class="section-subtitle">
+                    Sistema modular basado en Vtiger Open Source, adaptado específicamente 
+                    para consultorios odontológicos. Trazabilidad completa desde el primer contacto.
+                </p>
+            </div>
+            
+            <div class="crm-platform">
+                <div class="platform-logo">
+                    <i class="fas fa-database"></i>
+                </div>
+                <div class="platform-info">
+                    <h3 class="platform-title">Red Sapien CRM</h3>
+                    <p class="platform-description">
+                        Basado en Vtiger - Open Source. Sistema modular que crece con tu consultorio. 
+                        Totalmente adaptado a normativas médicas colombianas. Cada módulo interconectado 
+                        para una gestión 360° de tu práctica odontológica.
+                    </p>
+                    <a href="#https://sapienpruebas.od2.vtiger.com/appointments/implantesquiceno" class="demo-button">
+                        <i class="fas fa-play-circle"></i>
+                        Ver en Acción
+                    </a>
+                </div>
+            </div>
+            
+            <div class="modules-grid">
+                <div class="module-card">
+                    <div class="module-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4 class="module-title">Contactos & CRM</h4>
+                    <p class="module-description">
+                        Base de datos centralizada de pacientes con historial completo, 
+                        preferencias y recordatorios automáticos.
+                    </p>
+                    <ul class="module-features">
+                        <li>Ficha médica digital completa</li>
+                        <li>Historial de tratamientos</li>
+                        <li>Recordatorios automáticos</li>
+                        <li>Segmentación por tipo de paciente</li>
+                    </ul>
+                </div>
+                
+                <div class="module-card">
+                    <div class="module-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h4 class="module-title">Gestión de Citas</h4>
+                    <p class="module-description">
+                        Sistema inteligente de agendamiento con integración web y 
+                        confirmaciones automáticas.
+                    </p>
+                    <ul class="module-features">
+                        <li>Agendamiento online 24/7</li>
+                        <li>Confirmación automática vía SMS/WhatsApp</li>
+                        <li>Recordatorios pre-cita</li>
+                        <li>Link personalizado para cada paciente</li>
+                    </ul>
+                </div>
+                
+                <div class="module-card">
+                    <div class="module-icon">
+                        <i class="fas fa-teeth"></i>
+                    </div>
+                    <h4 class="module-title">Servicios & Tratamientos</h4>
+                    <p class="module-description">
+                        Catálogo completo de servicios con precios, duración y 
+                        requerimientos específicos.
+                    </p>
+                    <ul class="module-features">
+                        <li>Inventario de servicios</li>
+                        <li>Paquetes de tratamientos</li>
+                        <li>Presupuestos automáticos</li>
+                        <li>Seguimiento por procedimiento</li>
+                    </ul>
+                </div>
+                
+                <div class="module-card">
+                    <div class="module-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h4 class="module-title">Casos Médicos</h4>
+                    <p class="module-description">
+                        Seguimiento detallado de cada caso clínico con documentación 
+                        y evolución integrada.
+                    </p>
+                    <ul class="module-features">
+                        <li>Historial clínico digital</li>
+                        <li>Evolución de tratamientos</li>
+                        <li>Documentación adjunta</li>
+                        <li>Alertas de seguimiento</li>
+                    </ul>
+                </div>
+                
+                <div class="module-card">
+                    <div class="module-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h4 class="module-title">Clientes Potenciales</h4>
+                    <p class="module-description">
+                        Conversión automática de leads en pacientes con seguimiento 
+                        de origen y efectividad.
+                    </p>
+                    <ul class="module-features">
+                        <li>Captura desde web y redes</li>
+                        <li>Scoring automático</li>
+                        <li>Seguimiento de conversión</li>
+                        <li>Reportes de efectividad</li>
+                    </ul>
+                </div>
+                
+                <div class="module-card">
+                    <div class="module-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h4 class="module-title">Tickets Internos</h4>
+                    <p class="module-description">
+                        Gestión eficiente de tareas internas, recordatorios y 
+                        coordinación del equipo.
+                    </p>
+                    <ul class="module-features">
+                        <li>Asignación de tareas</li>
+                        <li>Seguimiento de pendientes</li>
+                        <li>Notificaciones al equipo</li>
+                        <li>Reportes de productividad</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="automation-flow">
+                <h3 class="flow-title">Proceso Automatizado de Cero a Paciente Recurrente</h3>
+                
+                <div class="flow-steps">
+                    <div class="flow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Lead Capturado</div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Cita Agendada</div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Historial Creado</div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">4</div>
+                        <div class="step-label">Tratamiento Asignado</div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">5</div>
+                        <div class="step-label">Paciente Recurrente</div>
+                    </div>
+                    <div class="flow-line"></div>
+                </div>
+                
+                <div class="profit-metrics">
+                    <div class="metric">
+                        <div class="metric-value">45%</div>
+                        <div class="metric-label">Reducción de Tiempo</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">3.2x</div>
+                        <div class="metric-label">ROI Incrementado</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">82%</div>
+                        <div class="metric-label">Pacientes Recurrentes</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">94%</div>
+                        <div class="metric-label">Satisfacción</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Crear red de nodos en el fondo
+            const network = document.getElementById('network');
+            const nodes = 50;
+            const lines = 30;
+            
+            // Crear nodos
+            for (let i = 0; i < nodes; i++) {
+                const node = document.createElement('div');
+                node.className = 'network-node';
+                node.style.left = `${Math.random() * 100}%`;
+                node.style.top = `${Math.random() * 100}%`;
+                node.style.animationDelay = `${Math.random() * 4}s`;
+                network.appendChild(node);
+            }
+            
+            // Crear líneas de conexión
+            for (let i = 0; i < lines; i++) {
+                const line = document.createElement('div');
+                line.className = 'network-line';
+                
+                const startX = Math.random() * 100;
+                const startY = Math.random() * 100;
+                const endX = Math.random() * 100;
+                const endY = Math.random() * 100;
+                
+                const length = Math.sqrt(Math.pow(endX - startX, 2) + Math.pow(endY - startY, 2));
+                const angle = Math.atan2(endY - startY, endX - startX) * 180 / Math.PI;
+                
+                line.style.width = `${length}%`;
+                line.style.left = `${startX}%`;
+                line.style.top = `${startY}%`;
+                line.style.transform = `rotate(${angle}deg)`;
+                line.style.opacity = `${0.1 + Math.random() * 0.2}`;
+                
+                network.appendChild(line);
+            }
+
+            // Animación de aparición para módulos
+            const moduleCards = document.querySelectorAll('.module-card');
+            moduleCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 200 + (index * 100));
+            });
+
+            // Animación de métricas
+            const metricValues = document.querySelectorAll('.metric-value');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const value = entry.target.textContent;
+                        
+                        if (value.includes('%')) {
+                            animatePercentage(entry.target, parseInt(value));
+                        } else if (value.includes('x')) {
+                            animateMultiplier(entry.target, parseFloat(value));
+                        }
+                        
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            metricValues.forEach(value => observer.observe(value));
+
+            function animatePercentage(element, target) {
+                let current = 0;
+                const duration = 2000;
+                const increment = target / (duration / 50);
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        element.textContent = target + '%';
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = Math.floor(current) + '%';
+                    }
+                }, 50);
+            }
+
+            function animateMultiplier(element, target) {
+                let current = 0;
+                const duration = 2000;
+                const increment = target / (duration / 50);
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        element.textContent = target.toFixed(1) + 'x';
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = current.toFixed(1) + 'x';
+                    }
+                }, 50);
+            }
+
+            // Efecto hover mejorado para botón de demo
+            const demoButton = document.querySelector('.demo-button');
+            demoButton.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px) scale(1.05)';
+            });
+            
+            demoButton.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
